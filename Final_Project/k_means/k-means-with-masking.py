@@ -58,15 +58,17 @@ def main():
 
     displayImg(segmented_img)
     
-    cv2.imwrite('kmeans_seg_' + str(i) + '.png', image)
+    cv2.imwrite('kmeans_seg_' + str(i) + '.png', segmented_img)
 
-    cluster_to_black = 3
+    cluster_to_black = 2
 
     masked_image = imageMask(image, labels, cluster_to_black)
 
     displayImg(masked_image)
     
-    cv2.imwrite('kmeans_mask_' + str(i) + '.png', image)
+    cv2.imwrite('kmeans_mask_' + str(i) + '.png', masked_image)
+    
+    print("now processing image: ", i)
     
 
 if (__name__ == '__main__'):
