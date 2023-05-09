@@ -1,3 +1,14 @@
+"""
+@author Dan Blanchette
+@date May 9th 2023
+
+@description: This program will use k-means clustering via the open CV library to segement microglia cells 
+in zebrafish microscopy images. The implmentation will also attempt to remove white noise from each image to help
+pre-process the image stack for further analysis. This is imperative as the cells fluro-protiens emit a "lime green"
+hue and the color white conflicts with its pixel range for image threshold settings.
+
+"""
+
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
